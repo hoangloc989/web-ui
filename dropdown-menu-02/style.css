@@ -1,0 +1,180 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+:root {
+    --primary: #625BFE;
+    --important: #F55E5E;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    height: 80px;
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    justify-content: end;
+}
+
+.navigation__group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-wrapper .icon {
+    width: 36px;
+    height: 36px;
+}
+
+.icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    object-fit: cover;
+}
+
+.avatar-wrapper {
+    position: relative;
+}
+
+.profile {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #f7f7f7;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.notification-mark {
+    position: absolute;
+    display: block;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--important);
+}
+
+.notifications-top {
+    border-bottom: 2px solid #F1F3F6;
+    min-height: 56px;
+    padding: 16px;
+}
+
+.notification-item {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    min-height: 64px;
+    gap: 12px;
+    padding: 12px 16px;
+    border-top: 1px solid #F1F3F6;
+}
+
+.notification-item--recent {
+    background-color: #ecf3ff;
+}
+
+.notification-item:hover {
+    background-color: #F5F5F7;
+}
+
+.notification-item--recent:hover {
+    background-color:  #c5dbff;
+}
+
+.notification-item time {
+    color: #7D8491;
+    font-size: 0.8rem;
+}
+
+.dropdown__wrapper {
+    max-width: 340px;
+    width: 100%;
+    top: 88px;
+    margin: 0px auto;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    animation: fadeOutAnimation ease-in-out 0.5s forwards;
+}
+
+.dropdown__wrapper h2 {
+    margin: 0px;
+    font-size: 1.25rem;
+    color: #192028;
+}
+
+.dropdown__wrapper--fade-in {
+    animation: fadeInAnimation ease-in-out 0.5s forwards;
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
