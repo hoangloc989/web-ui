@@ -1,0 +1,198 @@
+
+/* EBECF0 */
+
+
+:root {
+    --background: #EBECF0;
+    --table-background: #FFFFFF;
+    --primary: #101824;
+    --gray: #A0A7B1;
+    --odd-row: #f6f9ff;
+    --gray-background: #EDEEF1;
+    --gray-mid: #F1F2F6;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 16px;
+    background-color: var(--background);
+}
+
+.table-widget {
+    border-radius: 16px;
+    background-color: var(--table-background);
+    padding: 24px;
+    border: 2px solid var(--gray-background);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.table-widget table {
+    max-width: fit-content;
+    border-collapse: collapse;
+}
+
+.table-widget caption {
+    font-size: 1.12rem;
+    font-weight: 700;
+    text-align: left;
+    margin: 8px 0px;
+}
+
+
+.table-widget th {
+    padding: 20px 16px;
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.table-widget thead {
+    border-top: 2px solid var(--gray-background);
+}
+
+.table-widget tfoot {
+    margin-top: 16px;
+    border-top: 2px solid var(--gray-background);
+}
+
+.table-widget td {
+    padding: 8px 16px;
+    vertical-align: middle;
+}
+
+.table-widget tbody tr {
+    cursor: pointer;
+}
+
+.table-widget tbody tr:nth-child(odd) {
+    background-color: var(--odd-row);
+}
+
+.table-widget tbody tr:hover {
+    background-color: #e2ecff;
+}
+
+
+.table-row-count {
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: var(--gray-mid);
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 16px;
+    border-radius: 8px;
+}
+
+.team-member-profile {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-info__name {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.team-member-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.status {
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 700;
+}
+
+.status--active {
+    background-color: #EAFEF3;
+    color: #2ECC71;
+}
+
+.status--inactive {
+    background-color: #fff6e5;
+    color: #F4BD50;
+}
+
+.status--offline {
+    background-color: var(--gray-mid);
+    color: var(--gray);
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 8px;
+    background-color: var(--gray-mid);
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.tag::first-letter {
+    text-transform: uppercase;
+}
+
+.tag--design {
+    background-color: #f4efff;
+    color: #9A84DA;
+}
+
+.tag--QA {
+    color: #DF8FA8;
+    background-color: #fbdde7;
+}
+
+.tag--dev {
+    background-color: #eaf2ff;
+    color: #739FDC;
+}
+
+.tag--marketing {
+    background-color: #fff6e5;
+    color: #F4BD50;
+}
+
+.table-widget {
+    min-height: 80px;
+}
+
+.pagination {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+    padding: 0px;
+}
+
+.pagination a {
+    display: block;
+    color: var(--primary);
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.pagination a:hover, a.active{
+    background-color: var(--odd-row);
+    text-decoration: underline;
+}
