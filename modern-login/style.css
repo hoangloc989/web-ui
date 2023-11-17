@@ -1,0 +1,117 @@
+:root {
+  --color-grey: #f0f0f0;
+  --color-pink: rgb(254, 187, 189);
+  --color-blue: rgb(99, 201, 243);
+  --color-green: rgb(92, 195, 151);
+}
+body {
+  background-color: var(--color-grey);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.toRight {
+  animation: slideRight 0.5s ease-in-out forwards;
+}
+.toLeft {
+  animation: slideLeft 0.5s ease-in-out forwards;
+}
+
+.login-form {
+  width: 400px;
+  height: 500px;
+}
+.signup-form {
+  width: 400px;
+  height: 500px;
+}
+.switch {
+  color: white;
+  padding: 20px;
+  position: absolute;
+  left: 15px;
+  height: 500px;
+  width: 370px;
+  background: var(--color-pink);
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: fill;
+}
+.btn-switch {
+  background: var(--color-pink);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.btn-switch:hover {
+  background: var(--color-blue);
+}
+.green {
+  background: var(--color-green);
+}
+.form-input {
+  min-width: 250px;
+  height: 15px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.register-link {
+  margin-inline: 5px;
+  color: var(--color-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+    background: var(--color-pink);
+  }
+  100% {
+    transform: translateX(400px);
+
+    background: var(--color-green);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(400px);
+    background: var(--color-green);
+  }
+  100% {
+    transform: translateX(0px);
+    background: var(--color-pink);
+  }
+}
