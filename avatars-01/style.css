@@ -1,0 +1,53 @@
+
+
+
+:root {
+    --green: #2ECC71;
+    --orange: #ffd500;
+    --white: #F8F8FF;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    height: 100vh;
+}
+
+.avatars {
+    display: flex;
+    transition: all 0.2s ease-in-out;
+}
+
+.avatars img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 8px solid var(--green);
+    transition: all 0.2s ease-in-out;
+}
+
+.avatars img:nth-child(2) {
+    transform: translate(-6.25rem, 0);
+}
+
+.avatars img:nth-child(3) {
+    transform: translate(-12.5rem, 0);
+}
+
+.avatars img:nth-child(4) {
+    transform: translate(-18.75rem, 0);
+}
+
+.avatars img:hover:not(:nth-last-child(1)) {
+    margin-right: 110px;
+}
+
+.avatars img:hover {
+    border: 8px solid var(--orange);
+}
+
